@@ -5,6 +5,8 @@
 def mini_calculator():
     print("\n")
     print("Hello User!")
+
+    #tell the user he can't use a non-number
     try: 
         number_1 = float(input("Please enter your first number here: "))
         number_2 = float(input("Please enter your second number here: "))
@@ -32,9 +34,13 @@ def mini_calculator():
         print(answer)
 
     elif operation == "/":
-        print("DIVISION")
-        answer = (number_1 / number_2)
-        print(answer)
+        #tell the user he can't divide a number by zero
+        try:
+            print("DIVISION")
+            answer = (number_1 / number_2)
+            print(answer)
+        except ZeroDivisionError as error:
+            print("You can't divide any number by zero(0)")
     
     else:
         answer = "The operator you entered is not valid!"
