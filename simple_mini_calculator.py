@@ -4,6 +4,7 @@
 #ask the user which operation to use
 import pyfiglet
 from colorama import Fore
+from colorama import Back, Style
 def mini_calculator():
     print("\n")
     greetings = pyfiglet.figlet_format("Hello User!", font = "slant")
@@ -22,30 +23,30 @@ def mini_calculator():
     operation = input("Please select an operator: +-*/  ")
 
     if operation == "+":
-        plus_operator = pyfiglet.figlet_format("\nADDITION", font = "doom")
-        print(Fore.LIGHTYELLOW_EX + plus_operator + Fore.BLACK)
+        plus_operator = pyfiglet.figlet_format("\nAddition", font = "doom")
+        print(Fore.YELLOW + plus_operator + Fore.RESET)
         sum = (f"Answer: {number_1 + number_2}")
-        print(sum)
+        print(Fore.YELLOW + sum + Fore.RESET)
     
     elif operation == "-":
-        minus_operator = pyfiglet.figlet_format("\nSUBTRACTION", font = "doom")
-        print(Fore.RED + minus_operator + Fore.BLACK)
+        minus_operator = pyfiglet.figlet_format("\nSubtraction", font = "doom")
+        print(Fore.RED + minus_operator + Fore.RESET)
         difference = (f"Answer: {number_1 - number_2}")
-        print(difference)
+        print(Fore.RED + difference + Fore.RESET)
     
     elif operation == "*":
-        times_operator = pyfiglet.figlet_format("\nMULTIPLICATION", font = "doom")
-        print(Fore.BLUE + times_operator + Fore.BLACK)
+        times_operator = pyfiglet.figlet_format("\nMultiplication", font = "doom")
+        print(Fore.BLUE + times_operator + Fore.RESET)
         product = (f"Answer: {number_1 * number_2}")
-        print(product)
+        print(Fore.BLUE + product + Fore.RESET)
 
     elif operation == "/":
         #tell the user he can't divide a number by zero
         try:
-            division_operator = pyfiglet.figlet_format("\nDIVISION", font = "doom")
-            print(Fore.MAGENTA + division_operator + Fore.BLACK)
+            division_operator = pyfiglet.figlet_format("\nDivision", font = "doom")
+            print(Fore.MAGENTA + division_operator + Fore.RESET)
             quotient = (f"Answer: {number_1 / number_2}")
-            print(quotient)
+            print(Fore.MAGENTA + quotient + Fore.RESET)
         except ZeroDivisionError as error:
             print("Equation's Invalid\n")
             print(error)
@@ -56,12 +57,12 @@ def mini_calculator():
     else:
         invalid_operator = "The operator you entered is not valid!"
     
-        print(invalid_operator)
+        print(Back.RED + invalid_operator + Back.RESET)
 proceed = True
 while proceed:
     mini_calculator()
     while proceed:
-        rerun = pyfiglet.figlet_format("\nDo you want to compute again y/n?:    ", font = "bubble")
+        rerun = pyfiglet.figlet_format("\nDo you want to compute again y/n?:    ", font = "digital")
         styled_rerun = input(Fore.GREEN + rerun + Fore.BLACK)
         if rerun.lower() == "y":
             break
@@ -73,4 +74,4 @@ while proceed:
             invalid_statement = pyfiglet.figlet_format("The data you entered is invalid :(", font = "doom")
             print(Fore.LIGHTRED_EX + invalid_statement + Fore.BLACK)
         continue
-
+    
