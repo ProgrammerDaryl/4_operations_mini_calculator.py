@@ -62,6 +62,7 @@ proceed = True
 while proceed:
     mini_calculator()
     while proceed:
+        #ask the user if he/she wants to continue
         rerun = pyfiglet.figlet_format("\nDo you want to compute again y/n?:    ", font = "digital")
         styled_rerun = input(Fore.GREEN + rerun + Fore.BLACK)
         if rerun.lower() == "y":
@@ -74,4 +75,3 @@ while proceed:
             invalid_statement = pyfiglet.figlet_format("The data you entered is invalid :(", font = "doom")
             print(Fore.LIGHTRED_EX + invalid_statement + Fore.BLACK)
         continue
-    
