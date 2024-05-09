@@ -10,10 +10,24 @@ def mini_calculator():
 
     if operation == "+":
         answer = number_1 + number_2
+        print(answer)
     
     elif operation == "-":
         answer = number_1 - number_2
-        
+        print(answer)
+    
+    elif operation == "*":
+        answer = number_1 * number_2
+        print(answer)
 
+    elif operation == "/":
+        answer = (number_1 / number_2)
+        print(answer)
+    
+    else:
+        answer = "The operator you entered is not valid!"
+    
+        print(f"Answer: {answer}\n")
 
-
+while True:
+    mini_calculator()
