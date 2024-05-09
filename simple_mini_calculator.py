@@ -64,14 +64,14 @@ while proceed:
     while proceed:
         #ask the user if he/she wants to continue
         rerun = pyfiglet.figlet_format("\nDo you want to compute again y/n?:    ", font = "digital")
-        styled_rerun = input(Fore.GREEN + rerun + Fore.BLACK)
+        styled_rerun = input(Fore.GREEN + rerun + Fore.RESET)
         if rerun.lower() == "y":
             break
         elif rerun.lower() == "n":
             proceed = False
             end_statement = pyfiglet.figlet_format("\nThank you for trusting me! :)", font = "slant")
-            print(Fore.CYAN + end_statement + Fore.BLACK)
+            print(Fore.CYAN + end_statement + Fore.RESET)
         else:
             invalid_statement = pyfiglet.figlet_format("The data you entered is invalid :(", font = "doom")
-            print(Fore.LIGHTRED_EX + invalid_statement + Fore.BLACK)
+            print(Fore.LIGHTRED_EX + invalid_statement + Fore.RESET)
         continue
