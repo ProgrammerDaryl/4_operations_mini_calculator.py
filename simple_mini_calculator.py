@@ -3,6 +3,7 @@
 #ask the user to input the second number
 #ask the user which operation to use
 def mini_calculator():
+    print("\n")
     print("Hello User!")
     number_1 = float(input("Please enter your first number here: "))
     number_2 = float(input("Please enter your second number here: "))
@@ -28,6 +29,16 @@ def mini_calculator():
         answer = "The operator you entered is not valid!"
     
         print(f"Answer: {answer}\n")
-
-while True:
+proceed = True
+while proceed:
     mini_calculator()
+    while proceed:
+        rerun = input("Do you want to compute again y/n?: ")
+        if rerun.lower() == "y":
+            break
+        elif rerun.lower() == "n":
+            proceed = False
+        else:
+            print("The data you entered is invalid:(")
+        continue
+
