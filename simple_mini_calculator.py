@@ -5,23 +5,34 @@
 def mini_calculator():
     print("\n")
     print("Hello User!")
-    number_1 = float(input("Please enter your first number here: "))
-    number_2 = float(input("Please enter your second number here: "))
+    try: 
+        number_1 = float(input("Please enter your first number here: "))
+        number_2 = float(input("Please enter your second number here: "))
+    except ValueError as error:
+        print("Invalid input\n")
+        print(error)
+        print("Please try again\n")
+        return
+
     operation = input("Please select an operator: +-*/  ")
 
     if operation == "+":
+        print("\nADDITION")
         answer = number_1 + number_2
         print(answer)
     
     elif operation == "-":
+        print("SUBTRACTION")
         answer = number_1 - number_2
         print(answer)
     
     elif operation == "*":
+        print("MULTIPLICATION")
         answer = number_1 * number_2
         print(answer)
 
     elif operation == "/":
+        print("DIVISION")
         answer = (number_1 / number_2)
         print(answer)
     
@@ -38,6 +49,7 @@ while proceed:
             break
         elif rerun.lower() == "n":
             proceed = False
+            print("\nThank you for trusting me!")
         else:
             print("The data you entered is invalid:(")
         continue
