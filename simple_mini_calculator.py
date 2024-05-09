@@ -72,6 +72,7 @@ while proceed:
             end_statement = pyfiglet.figlet_format("\nThank you for trusting me! :)", font = "slant")
             print(Fore.CYAN + end_statement + Fore.RESET)
         else:
+            #remind the user that the inputted word is invalid
             invalid_statement = pyfiglet.figlet_format("The data you entered is invalid :(", font = "doom")
             print(Fore.LIGHTRED_EX + invalid_statement + Fore.RESET)
         continue
