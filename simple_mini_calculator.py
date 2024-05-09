@@ -65,9 +65,9 @@ while proceed:
         #ask the user if he/she wants to continue
         rerun = pyfiglet.figlet_format("\nDo you want to compute again y/n?:    ", font = "digital")
         styled_rerun = input(Fore.GREEN + rerun + Fore.RESET)
-        if rerun.lower() == "y":
+        if styled_rerun.lower() == "y":
             break
-        elif rerun.lower() == "n":
+        elif styled_rerun.lower() == "n":
             proceed = False
             end_statement = pyfiglet.figlet_format("\nThank you for trusting me! :)", font = "slant")
             print(Fore.CYAN + end_statement + Fore.RESET)
