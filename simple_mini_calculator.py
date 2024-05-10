@@ -23,6 +23,8 @@ def mini_calculator():
         print(error)
         print("Please try again\n")
         return
+    finally:
+        retain_message = "\nGood Luck! :)\n"
 
     if operation == "+":
         plus_operator = pyfiglet.figlet_format("\nAddition", font = "doom")
@@ -55,11 +57,10 @@ def mini_calculator():
             print("\nPlease try again!")
             return
             
-    
     else:
-        invalid_operator = "The operator you entered is not valid!"
+        invalid_operator = "\nThe operator you entered is not valid!\n"
     
-        print(Back.RED + invalid_operator + Back.RESET)
+        print(Back.RED + invalid_operator + Back.RESET + retain_message)
 
 proceed = True
 while proceed:
