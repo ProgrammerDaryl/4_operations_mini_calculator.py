@@ -14,6 +14,19 @@ def mini_calculator():
     operation = input("Please select an operator: +-*/  ")
 
     if operation == "+":
+        try: 
+            number_1 = float(input("Please enter your first number here: "))
+            number_2 = float(input("Please enter your second number here: "))
+        #tell the user he can't use a non-number
+        except ValueError as error:
+            print("Invalid input\n")
+            print(error)
+            print("Please try again\n")
+            return
+        finally:
+            retain_message = "\nGood Luck! :)\n"
+            print(retain_message)
+    
         plus_operator = pyfiglet.figlet_format("\nAddition", font = "doom")
         print(Fore.YELLOW + plus_operator + Fore.RESET)
         sum = (f"Answer: {number_1 + number_2}")
@@ -49,19 +62,6 @@ def mini_calculator():
     
         print(Back.RED + invalid_operator + Back.RESET)
         return
-
-    try: 
-        number_1 = float(input("Please enter your first number here: "))
-        number_2 = float(input("Please enter your second number here: "))
-        #tell the user he can't use a non-number
-    except ValueError as error:
-        print("Invalid input\n")
-        print(error)
-        print("Please try again\n")
-        return
-    finally:
-        retain_message = "\nGood Luck! :)\n"
-
 
 proceed = True
 while proceed:
