@@ -33,18 +33,45 @@ def mini_calculator():
         print(Fore.YELLOW + sum + Fore.RESET)
     
     elif operation == "-":
+        try: 
+            number_1 = float(input("Please enter your first number here: "))
+            number_2 = float(input("Please enter your second number here: "))
+        #tell the user he can't use a non-number
+        except ValueError as error:
+            print("Invalid input\n")
+            print(error)
+            print("Please try again\n")
+            return
         minus_operator = pyfiglet.figlet_format("\nSubtraction", font = "doom")
         print(Fore.RED + minus_operator + Fore.RESET)
         difference = (f"Answer: {number_1 - number_2}")
         print(Fore.RED + difference + Fore.RESET)
     
     elif operation == "*":
+        try: 
+            number_1 = float(input("Please enter your first number here: "))
+            number_2 = float(input("Please enter your second number here: "))
+        #tell the user he can't use a non-number
+        except ValueError as error:
+            print("Invalid input\n")
+            print(error)
+            print("Please try again\n")
+            return
         times_operator = pyfiglet.figlet_format("\nMultiplication", font = "doom")
         print(Fore.BLUE + times_operator + Fore.RESET)
         product = (f"Answer: {number_1 * number_2}")
         print(Fore.BLUE + product + Fore.RESET)
 
     elif operation == "/":
+        try: 
+            number_1 = float(input("Please enter your first number here: "))
+            number_2 = float(input("Please enter your second number here: "))
+        #tell the user he can't use a non-number
+        except ValueError as error:
+            print("Invalid input\n")
+            print(error)
+            print("Please try again\n")
+            return
         #tell the user he can't divide a number by zero
         try:
             division_operator = pyfiglet.figlet_format("\nDivision", font = "doom")
