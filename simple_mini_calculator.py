@@ -42,6 +42,10 @@ def mini_calculator():
             print(error)
             print("Please try again\n")
             return
+        finally:
+            retain_message = "\nGood Luck! :)\n"
+            print(retain_message)
+
         minus_operator = pyfiglet.figlet_format("\nSubtraction", font = "doom")
         print(Fore.RED + minus_operator + Fore.RESET)
         difference = (f"Answer: {number_1 - number_2}")
@@ -57,6 +61,9 @@ def mini_calculator():
             print(error)
             print("Please try again\n")
             return
+        finally:
+            retain_message = "\nGood Luck! :)\n"
+            print(retain_message)
         times_operator = pyfiglet.figlet_format("\nMultiplication", font = "doom")
         print(Fore.BLUE + times_operator + Fore.RESET)
         product = (f"Answer: {number_1 * number_2}")
@@ -83,6 +90,9 @@ def mini_calculator():
             print(error)
             print("\nPlease try again!")
             return
+        finally:
+            retain_message = "\nGood Luck! :)\n"
+            print(retain_message)
             
     else:
         invalid_operator = "\nThe operator you entered is not valid!\n"
