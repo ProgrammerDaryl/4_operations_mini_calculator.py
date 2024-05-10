@@ -10,6 +10,9 @@ def mini_calculator():
     greetings = pyfiglet.figlet_format("Hello User!", font = "slant")
     print(Fore.CYAN + greetings + Fore.RESET)
 
+    #ask the user which operator
+    operation = input("Please select an operator: +-*/  ")
+
     #tell the user he can't use a non-number
     try: 
         number_1 = float(input("Please enter your first number here: "))
@@ -20,7 +23,6 @@ def mini_calculator():
         print("Please try again\n")
         return
 
-    operation = input("Please select an operator: +-*/  ")
 
     if operation == "+":
         plus_operator = pyfiglet.figlet_format("\nAddition", font = "doom")
@@ -58,6 +60,7 @@ def mini_calculator():
         invalid_operator = "The operator you entered is not valid!"
     
         print(Back.RED + invalid_operator + Back.RESET)
+
 proceed = True
 while proceed:
     mini_calculator()
