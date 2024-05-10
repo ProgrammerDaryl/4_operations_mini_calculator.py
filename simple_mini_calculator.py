@@ -2,6 +2,7 @@
 #ask the user to input the first number
 #ask the user to input the second number
 #ask the user which operation to use
+
 import pyfiglet
 from colorama import Fore
 from colorama import Back, Style
@@ -13,16 +14,15 @@ def mini_calculator():
     #ask the user which operator
     operation = input("Please select an operator: +-*/  ")
 
-    #tell the user he can't use a non-number
     try: 
         number_1 = float(input("Please enter your first number here: "))
         number_2 = float(input("Please enter your second number here: "))
+        #tell the user he can't use a non-number
     except ValueError as error:
         print("Invalid input\n")
         print(error)
         print("Please try again\n")
         return
-
 
     if operation == "+":
         plus_operator = pyfiglet.figlet_format("\nAddition", font = "doom")
